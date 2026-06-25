@@ -1,0 +1,46 @@
+# Copy this to config.yaml (which is gitignored) and fill it in.
+# config.yaml holds your DeepSeek API key, so it must never be committed.
+
+run_id: pilot
+
+models:
+  - name: chatgpt
+    adapter: manual
+    app_label: "ChatGPT app"
+    note: "Use a brand-new chat for EACH prompt. Default model. No custom instructions / memory off."
+
+  - name: claude
+    adapter: manual
+    app_label: "Claude app (claude.ai)"
+    note: "Brand-new chat for EACH prompt. Default model. No project / custom instructions."
+
+  # DeepSeek via direct API. NOTE: the key baked into C:\Windows\system32\deepseek.cmd
+  # is DEAD (returns 401). Get a fresh key from https://platform.deepseek.com and
+  # paste it below. Until then, leave deepseek out of your run (--model chatgpt --model claude)
+  # and grade by hand.
+  - name: deepseek
+    adapter: deepseek_api
+    style: openai                       # openai | anthropic
+    base_url: "https://api.deepseek.com"
+    chat_path: "/v1/chat/completions"
+    model: "deepseek-chat"              # or deepseek-reasoner
+    api_key: "PASTE_VALID_DEEPSEEK_KEY"
+    system_prompt: ""                   # keep empty: we want the raw model, not an agent persona
+    temperature: 0
+    max_tokens: 2000
+
+# The grader. DeepSeek is the neutral third party (no stake in Claude-vs-GPT).
+# Until you have a valid key, grade with:  python grade.py --grader human
+grader:
+  name: deepseek                        # 'human' | 'mock' | a model name
+  adapter: deepseek_api
+  style: openai
+  base_url: "https://api.deepseek.com"
+  chat_path: "/v1/chat/completions"
+  model: "deepseek-chat"
+  api_key: "PASTE_VALID_DEEPSEEK_KEY"
+  temperature: 0
+  max_tokens: 3000
+
+capture:
+  response_sentinel: "<<<END>>>"

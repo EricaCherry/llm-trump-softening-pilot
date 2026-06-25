@@ -1,0 +1,17 @@
+# Secrets — never commit
+config.yaml
+config.local.yaml
+.env
+apideepseek.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# raw captures / responses / grades / scratch (regenerable; not published)
+responses/
+grades/
+captures/
+grading/
+blind_grading/
+assets/*.png

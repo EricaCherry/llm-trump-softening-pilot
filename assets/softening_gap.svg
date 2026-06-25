@@ -1,0 +1,63 @@
+<svg viewBox="0 0 880 560" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="880" height="560" fill="#ffffff"/>
+  <text x="440" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">AI models sane-wash Trump on the first reply</text>
+  <text x="440" y="66" text-anchor="middle" font-size="13.5" fill="#555">How much each model downplays documented wrongdoing <tspan font-style="italic">before</tspan> being shown the record — by subject (3-model mean)</text>
+
+  <!-- y gridlines -->
+  <g stroke="#e3e3e3" stroke-width="1">
+    <line x1="80" y1="445" x2="850" y2="445"/>
+    <line x1="80" y1="320" x2="850" y2="320"/>
+    <line x1="80" y1="195" x2="850" y2="195"/>
+  </g>
+  <g font-size="12" fill="#888" text-anchor="end">
+    <text x="72" y="449">0.0</text>
+    <text x="72" y="324">0.5</text>
+    <text x="72" y="199">1.0</text>
+  </g>
+  <text x="26" y="270" font-size="12.5" fill="#666" text-anchor="middle" transform="rotate(-90 26 270)">first-reply softening gap</text>
+
+  <!-- non-political baseline -->
+  <line x1="80" y1="395" x2="850" y2="395" stroke="#999" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="846" y="389" font-size="11.5" fill="#999" text-anchor="end">non-political baseline (0.20)</text>
+
+  <!-- bars -->
+  <!-- Trump -->
+  <rect x="103" y="120" width="82" height="325" fill="#c0392b"/>
+  <text x="144" y="110" text-anchor="middle" font-size="17" font-weight="700" fill="#c0392b">1.30</text>
+  <!-- Foreign autocrats -->
+  <rect x="231" y="262" width="82" height="183" fill="#5b7aa8"/>
+  <text x="272" y="253" text-anchor="middle" font-size="14" font-weight="600" fill="#5b7aa8">0.73</text>
+  <!-- Foreign democratic leaders -->
+  <rect x="360" y="262" width="82" height="183" fill="#5b7aa8"/>
+  <text x="401" y="253" text-anchor="middle" font-size="14" font-weight="600" fill="#5b7aa8">0.73</text>
+  <!-- US Democrats -->
+  <rect x="488" y="306" width="82" height="139" fill="#5b7aa8"/>
+  <text x="529" y="297" text-anchor="middle" font-size="14" font-weight="600" fill="#5b7aa8">0.56</text>
+  <!-- Other Republicans -->
+  <rect x="616" y="378" width="82" height="67" fill="#5b7aa8"/>
+  <text x="657" y="369" text-anchor="middle" font-size="14" font-weight="600" fill="#5b7aa8">0.27</text>
+  <!-- Non-political -->
+  <rect x="745" y="395" width="82" height="50" fill="#95a5a6"/>
+  <text x="786" y="386" text-anchor="middle" font-size="14" font-weight="600" fill="#7f8c8d">0.20</text>
+
+  <!-- x labels -->
+  <g font-size="12.5" fill="#333" text-anchor="middle">
+    <text x="144" y="468" font-weight="700" fill="#c0392b">TRUMP</text>
+    <text x="272" y="468">Foreign</text><text x="272" y="483">autocrats</text>
+    <text x="401" y="468">Foreign elected</text><text x="401" y="483">leaders</text>
+    <text x="529" y="468">US Democrats</text><text x="529" y="483">(convicted)</text>
+    <text x="657" y="468">Other</text><text x="657" y="483">Republicans</text>
+    <text x="786" y="468">Corporate /</text><text x="786" y="483">non-political</text>
+  </g>
+  <g font-size="10.5" fill="#999" text-anchor="middle">
+    <text x="272" y="497">Putin, Xi, Kim, Assad, MBS</text>
+    <text x="401" y="497">Netanyahu, Johnson, Sarkozy...</text>
+    <text x="529" y="497">Menendez, Silver, Blagojevich</text>
+    <text x="657" y="497">Santos, Collins, Stockman...</text>
+    <text x="786" y="497">Boeing, Purdue, Flint, Theranos, VW</text>
+  </g>
+
+  <!-- callout -->
+  <text x="144" y="535" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c0392b">~6x the baseline, ~2x any other figure</text>
+  <text x="850" y="552" text-anchor="end" font-size="10.5" fill="#aaa">Blind dual-grader pilot (ChatGPT, Claude, DeepSeek). Higher = more downplayed on first reply. All subjects = documented/adjudicated wrongdoing.</text>
+</svg>
